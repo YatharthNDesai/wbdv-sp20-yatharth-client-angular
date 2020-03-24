@@ -1,0 +1,124 @@
+<!--<h1>course-list works!</h1>-->
+
+<!--<input [(ngModel)]="newCourseTitle"/>-->
+<!--<button (click)="createCourse(newCourseTitle)">-->
+<!--  Create new Course-->
+<!--</button>-->
+
+<!--<h3>{{newCourseTitle}}</h3>-->
+<!--<ul>-->
+<!--  <li *ngFor="let course of courses">-->
+<!--    {{course.title}}-->
+<!--    <button (click)="deleteCourse(course)">-->
+<!--      Delete-->
+<!--    </button>-->
+<!--  </li>-->
+<!--</ul>-->
+<!--<head>-->
+<!--  <meta charset="UTF-8">-->
+<!--  <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--  <title> Home Page </title>-->
+<!--  &lt;!&ndash; Bootstrap and fontawesome has been used to give the page a consistent look&ndash;&gt;-->
+<!--  <link-->
+<!--    href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"-->
+<!--    rel="stylesheet"-->
+<!--  />-->
+<!--  <link-->
+<!--    href="home.style.client.css"-->
+<!--    rel="stylesheet"-->
+<!--  />-->
+<!--  <link-->
+<!--    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.css"-->
+<!--    rel="stylesheet"-->
+<!--  />-->
+<!--</head>-->
+
+<div class="container-fluid">
+  <!-- Floating button-->
+  <div class="fixed-action-btn">
+    <button class="btn btn-danger fab-container">
+      <i class="fa fa-plus"></i>
+    </button>
+  </div>
+  <!-- Navbar for the page-->
+  <nav class="navbar navbar-dark bg-primary row">
+    <!-- Hamburger button-->
+    <button class="btn wbdv-field wbdv-hamburger btn-primary col-1 col-md-1" type="button" data-toggle="collapse"
+            data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01"
+            aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fa fa-bars"></i>
+    </button>
+    <!-- Page header-->
+    <div class="wbdv-course-manager col-0 col-md-3 ">
+      <a class="navbar-brand wbdv-label wbdv-course-manager" href="#">Course
+        Manager</a>
+    </div>
+    <div class="col-11 col-md-8">
+      <form class="form-inline">
+        <!-- new course field-->
+        <div style="width: 80%">
+<!--          <input [(ngModel)]="newCourseTitle" name="course-name"/>-->
+          <input [(ngModel)]="newCourseTitle" name="course-name" class="form-control wbdv-field wbdv-new-course" style="width: 100%"
+                 placeholder="New Course Title" aria-label="Search"/>
+        </div>
+        <!-- new course button-->
+        <div style="width: 20%" class="p-2">
+          <button (click)="createCourse(newCourseTitle)" class="btn btn-danger wbdv-button wbdv-add-course" type="submit">
+            <i class="fa fa-plus"></i>
+          </button>
+        </div>
+      </form>
+    </div>
+
+
+  </nav>
+</div>
+<div class="container ">
+  <!-- Header table-->
+  <table class="table table-hover">
+    <thead>
+    <tr class="my-head">
+      <!-- Title header-->
+      <th class="wbdv-header wbdv-title" scope="col">
+        Title
+      </th>
+      <!-- Owner header-->
+<!--      <th class="wbdv-header wbdv-owner"  scope="col">Owned by</th>-->
+      <!-- Last modified header-->
+      <th class="wbdv-header wbdv-last-modified" scope="col">Last Modified by</th>
+      <!-- Grid layout button-->
+      <th class="wbdv-button wbdv-grid-layout" scope="col">
+        <button class="btn wbdv-button wbdv-grid-layout " type="button">
+          <i class="fas fa-th"></i>
+        </button>
+      </th>
+      <!-- List layout button -->
+      <th class="wbdv-button wbdv-list-layout" scope="col">
+        <button class="btn wbdv-button wbdv-list-layout " type="button">
+          <i class="fas fa-columns"></i>
+        </button>
+      </th>
+      <!-- Sort button-->
+      <th class="wbdv-header wbdv-sort" scope="col">
+        <button class="btn" type="button">
+          <i class="fa fa-sort-alpha-down"></i>
+        </button>
+      </th>
+    </tr>
+    </thead>
+
+  </table>
+<!--  <h6>Today</h6>-->
+  <!-- Content table-->
+  <table class="table table-hover">
+    <tbody>
+    <tr *ngFor="let course of courses" class="my-row">
+      <td class="wbdv-row wbdv-title">
+        <i class="fas fa-file wbdv-row wbdv-icon"></i>
+        {{course.title}}</td>
+      <td class="wbdv-row wbdv-last-modified">{{currentDate}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
