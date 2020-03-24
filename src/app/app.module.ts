@@ -10,6 +10,8 @@ import { CourseViewerComponent } from './course-viewer/course-viewer.component';
 import { HomeComponent } from './home/home.component';
 import { ModuleListComponent } from './module-list/module-list.component';
 import { LessonTabsComponent } from './lesson-tabs/lesson-tabs.component';
+import { TopicPillsComponent } from './topic-pills/topic-pills.component';
+import { HeadingWidgetComponent } from './heading-widget/heading-widget.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { LessonTabsComponent } from './lesson-tabs/lesson-tabs.component';
     CourseViewerComponent,
     HomeComponent,
     ModuleListComponent,
-    LessonTabsComponent
+    LessonTabsComponent,
+    TopicPillsComponent,
+    HeadingWidgetComponent
   ],
   imports: [
     BrowserModule,

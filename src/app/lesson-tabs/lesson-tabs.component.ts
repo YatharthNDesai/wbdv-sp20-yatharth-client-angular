@@ -10,11 +10,7 @@ export class LessonTabsComponent implements OnInit {
 
   constructor(private route: ActivatedRoute) { }
 
-  lessons = [
-    {id: '123', title: 'Lesson 1'},
-    {id: '234', title: 'Lesson 2'},
-    {id: '345', title: 'Lesson 3'}
-  ]
+  lessons = []
 
   courseId = ''
   moduleId = ''

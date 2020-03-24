@@ -10,7 +10,8 @@ const routes: Routes = [
   {path: 'details/:courseId', component: CourseViewerComponent},
   {path: '', component: HomeComponent},
   {path: 'details/courses/:courseId/modules/:moduleId', component: CourseViewerComponent},
-  {path: 'details/courses/:courseId/modules/:moduleId/lessons/:lessonId', component: CourseViewerComponent}
+  {path: 'details/courses/:courseId/modules/:moduleId/lessons/:lessonId', component: CourseViewerComponent},
+  {path: 'details/courses/:courseId/modules/:moduleId/lessons/:lessonId/topics/:topicId', component: CourseViewerComponent}
 ];
 
 @NgModule({

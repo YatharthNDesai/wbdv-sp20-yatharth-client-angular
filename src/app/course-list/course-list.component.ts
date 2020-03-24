@@ -12,12 +12,7 @@ export class CourseListComponent implements OnInit {
 
   newCourseTitle = ''
   currentDate = new Date().getHours()
-  courses = [
-    {id: '123', title: 'Course A'},
-    {id: '234', title: 'Course B'},
-    {id: '345', title: 'Course C'},
-    {id: '456', title: 'Course D'}
-  ]
+  courses = []
 
   deleteCourse = (deletedCourse) =>
     this.courses = this.courses.filter(course => course !== deletedCourse)

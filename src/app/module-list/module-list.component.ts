@@ -14,8 +14,7 @@ export class ModuleListComponent implements OnInit {
 
   courseId = ''
   moduleId = ''
-  modules = [
-    ]
+  modules = []
 
   ngOnInit(): void {
     this.route.params.subscribe(params => {

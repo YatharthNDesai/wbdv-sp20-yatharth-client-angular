@@ -89,13 +89,13 @@
       <!-- Grid layout button-->
       <th class="wbdv-button wbdv-grid-layout" scope="col">
         <button class="btn wbdv-button wbdv-grid-layout " type="button">
-          <i class="fas fa-th"></i>
+          <i class="fa fa-th"></i>
         </button>
       </th>
       <!-- List layout button -->
       <th class="wbdv-button wbdv-list-layout" scope="col">
         <button class="btn wbdv-button wbdv-list-layout " type="button">
-          <i class="fas fa-columns"></i>
+          <i class="fa fa-columns"></i>
         </button>
       </th>
       <!-- Sort button-->
@@ -114,12 +114,13 @@
     <tbody>
     <tr *ngFor="let course of courses" class="my-row">
       <td class="wbdv-row wbdv-title">
-        <i class="fas fa-file wbdv-row wbdv-icon"></i>
+        <i class="fa fa-file wbdv-row wbdv-icon"></i>
         <a href="/details/{{course._id}}">
         {{course.title}}
         </a>
       </td>
       <td class="wbdv-row wbdv-last-modified">{{currentDate}}</td>
+      <td class="wbdv-empty"></td>
     </tr>
     </tbody>
   </table>

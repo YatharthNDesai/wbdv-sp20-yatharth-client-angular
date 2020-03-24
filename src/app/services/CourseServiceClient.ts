@@ -14,4 +14,8 @@ export class CourseServiceClient {
     fetch(`https://wbdv-generic-server.herokuapp.com/api/001377543/courses/${courseId}/modules`)
       .then(response => response.json())
 
+  findTopicsForLesson = (lessonId) =>
+    fetch(`https://secret-beach-98864.herokuapp.com/api/lessons/${lessonId}/topics`)
+      .then(response => response.json())
+
 }
