@@ -1,0 +1,24 @@
+
+  <!-- Module buttons -->
+  <ul class="list-group">
+<!--  <button *ngFor="let module of modules" type="button" class="btn btn-secondary  m-4 container-fluid wbdv-module-item">-->
+<!--    <label class="wbdv-module-item-title">{{module.title}}-->
+<!--    </label>-->
+<!--    <a class="wbdv-module-item-delete-btn" href="#">-->
+<!--      X-->
+<!--    </a>-->
+<!--  </button>-->
+<!--  <button type="button" class="btn m-4 container-fluid wbdv-module-item-add-btn">-->
+<!--    <i class="fa fa-plus" style="color: white;"></i>-->
+<!--  </button>-->
+    <li *ngFor="let module of modules" class="list-group-item active container-fluid m-1"
+        [class] = "{'active' : moduleId === module._id}"
+    >
+      <a class="active" routerLink="/details/courses/{{courseId}}/modules/{{module._id}}"
+         [class] = "{'active' : moduleId === module._id}">
+        {{module.title}}
+      </a>
+    </li>
+<!--    <li class="list-group-item">{{moduleId}}</li>-->
+  </ul>
+

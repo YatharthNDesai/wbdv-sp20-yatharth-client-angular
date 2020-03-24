@@ -1,0 +1,23 @@
+.wbdv-module-item{
+  border: 1px solid ;
+  padding: 10px 24px;
+  display: block;
+  width:90%;
+}
+
+.wbdv-module-item-delete-btn{
+  float: right;
+  color: white
+}
+
+.wbdv-module-item-add-btn {
+  color: gray();
+  border: 1px solid ;
+  padding: 10px 24px;
+  display: block;
+  width:90%;
+}
+
+.active{
+  color: white;
+}

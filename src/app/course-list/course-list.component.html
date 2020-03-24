@@ -115,7 +115,10 @@
     <tr *ngFor="let course of courses" class="my-row">
       <td class="wbdv-row wbdv-title">
         <i class="fas fa-file wbdv-row wbdv-icon"></i>
-        {{course.title}}</td>
+        <a href="/details/{{course._id}}">
+        {{course.title}}
+        </a>
+      </td>
       <td class="wbdv-row wbdv-last-modified">{{currentDate}}</td>
     </tr>
     </tbody>
