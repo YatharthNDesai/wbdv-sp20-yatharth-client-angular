@@ -1,0 +1,8 @@
+<h2>Quiz Component</h2>
+<div class="container">
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let quiz of quizzes">
+      <a href='/courses/{{courseId}}/quizzes/{{quiz._id}}'>{{quiz.title}}</a>
+    </li>
+  </ul>
+</div>

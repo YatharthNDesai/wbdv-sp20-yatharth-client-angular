@@ -12,6 +12,10 @@ import { ModuleListComponent } from './module-list/module-list.component';
 import { LessonTabsComponent } from './lesson-tabs/lesson-tabs.component';
 import { TopicPillsComponent } from './topic-pills/topic-pills.component';
 import { HeadingWidgetComponent } from './heading-widget/heading-widget.component';
+import { QuizzesComponent } from './quizzes/quizzes.component';
+import { QuizComponent } from './quiz/quiz.component';
+import { TrueFalseQuestionComponent } from './true-false-question/true-false-question.component';
+import { MultipleChoiceQuestionComponent } from './multiple-choice-question/multiple-choice-question.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +26,11 @@ import { HeadingWidgetComponent } from './heading-widget/heading-widget.componen
     ModuleListComponent,
     LessonTabsComponent,
     TopicPillsComponent,
-    HeadingWidgetComponent
+    HeadingWidgetComponent,
+    QuizzesComponent,
+    QuizComponent,
+    TrueFalseQuestionComponent,
+    MultipleChoiceQuestionComponent
   ],
   imports: [
     BrowserModule,

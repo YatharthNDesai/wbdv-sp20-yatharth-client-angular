@@ -1,0 +1,31 @@
+
+<h4>{{question.question}}</h4>
+
+<ul class="list-group">
+  <li *ngFor="let option of question.choices"
+      class="list-group-item"
+  [ngClass]="grading && {'list-group-item-success' : answer === question.correct && answer === option,
+                         'list-group-item-danger' : answer !== question.correct && answer === option}"
+
+  >
+
+    <label>
+      <input type="radio"
+             value="{{option}}"
+             [(ngModel)]="answer"
+             name="{{question._id}}"/>{{option}}
+    </label>
+  </li>
+</ul>
+<br/>
+Your answer : {{answer}}
+<br/>
+<label [hidden]="grading === false" >
+  Correct Answer : {{question.correct}}
+</label>
+<br/>
+<button class="btn btn-primary" (click)="grade()">Grade</button>
+
+<!--<span [hidden]="answer !== question.correct">Yay!</span>-->
+<!--<span [hidden]="answer !== question.correct">Boo!</span>-->
+
