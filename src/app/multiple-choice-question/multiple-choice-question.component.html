@@ -1,13 +1,24 @@
-
-<h4>{{question.question}}</h4>
+<h4>
+  {{question.question}}
+  <label class= "fa" style="float:right;"
+         [ngClass]="grading && {'fa-check' : answer === question.correct,
+       'fa-times': answer !== question.correct}"
+  ></label>
+</h4>
 
 <ul class="list-group">
   <li *ngFor="let option of question.choices"
       class="list-group-item"
-  [ngClass]="grading && {'list-group-item-success' : answer === question.correct && answer === option,
+      [ngClass]="grading && {'list-group-item-success' : (answer === question.correct && answer === option)
+   || (answer !== question.correct && option === question.correct),
                          'list-group-item-danger' : answer !== question.correct && answer === option}"
 
   >
+    <label class="fa" style="float: right"
+           [ngClass]="grading && {'fa-check' : (answer === question.correct && answer === option)
+   || (answer !== question.correct && option === question.correct),
+                         'fa-times' : answer !== question.correct && answer === option}"
+    ></label>
 
     <label>
       <input type="radio"
@@ -20,7 +31,7 @@
 <br/>
 Your answer : {{answer}}
 <br/>
-<label [hidden]="grading === false" >
+<label [hidden]="grading === false">
   Correct Answer : {{question.correct}}
 </label>
 <br/>

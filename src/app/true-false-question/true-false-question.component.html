@@ -1,9 +1,17 @@
 
-<h4>{{question.question}} {{grading}}</h4>
+<h4>
+  {{question.question}}
+  <label class= "fa" style="float:right;"
+         [ngClass]="grading && {'fa-check' : answer === question.correct,
+       'fa-times': answer !== question.correct}"
+  ></label>
+</h4>
+
 
 <ul class="list-group">
   <li class="list-group-item "
-      [ngClass]="grading && {'list-group-item-success' : answer === 'true' && answer === question.correct,
+      [ngClass]="grading && {'list-group-item-success' : (answer === 'true' && answer === question.correct)
+      || (answer !== 'true' && answer !== question.correct),
       'list-group-item-danger' : answer === 'true' && answer !== question.correct
       }">
     <label>
@@ -12,10 +20,15 @@
              [(ngModel)]="answer"
              name="{{question._id}}"/>True
     </label>
+    <label class="fa" style="float: right"
+           [ngClass]="grading && {'fa-check' : (answer === 'true' && answer === question.correct)
+           || (answer === 'false' && answer !== question.correct),
+           'fa-times' : answer === 'true' && answer !== question.correct}"></label>
   </li>
   <br/>
   <li class="list-group-item"
-      [ngClass]="grading && {'list-group-item-success' : answer === 'false' && answer === question.correct,
+      [ngClass]="grading && {'list-group-item-success' : (answer === 'false' && answer === question.correct)
+      ||  (answer !== 'false' && answer !== question.correct),
       'list-group-item-danger' :answer === 'false' && answer !== question.correct
       }" >
     <label>
@@ -24,6 +37,10 @@
              [(ngModel)]="answer"
              name="{{question._id}}"/>False
     </label>
+    <label class="fa" style="float: right"
+           [ngClass]="grading && {'fa-check' : (answer === 'false' && answer === question.correct)
+           || (answer === 'true' && answer !== question.correct),
+           'fa-times' : answer === 'false' && answer !== question.correct}"></label>
   </li>
 </ul>
 

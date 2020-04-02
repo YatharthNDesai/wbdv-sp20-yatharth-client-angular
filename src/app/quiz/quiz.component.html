@@ -1,4 +1,11 @@
-<h1>Quiz </h1>
+
+<div *ngFor="let q of quizCurrent">
+  <h1 *ngIf="q._id === quizId">
+  {{q.title}}
+  </h1>
+</div>
+<br/>
+
 <div class="container-fluid">
 <ul class="list-group">
 

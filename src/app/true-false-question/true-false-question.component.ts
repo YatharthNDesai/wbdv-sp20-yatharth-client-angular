@@ -10,7 +10,9 @@ export class TrueFalseQuestionComponent implements OnInit {
   constructor() { }
 
   @Input()
-  question = {}
+  question = {_id: '', title: '', quizId: '', question:
+      '', correct: '', type:
+      '', choices: []};
   answer = null
   grading = false
   grade = () => {this.grading = true}

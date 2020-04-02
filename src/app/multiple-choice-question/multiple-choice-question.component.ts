@@ -11,10 +11,13 @@ export class MultipleChoiceQuestionComponent implements OnInit {
 
 
   @Input()
-  question = {}
+  question = {_id: '', title: '', quizId: '', question:
+      '', correct: '', type:
+      '', choices: []};
   grading = false
   answer = null
-  options = this.question.choices
+  // // @ts-ignore
+  // options = this.question.choices
   grade = () => this.grading = true
   ngOnInit(): void {
   }
