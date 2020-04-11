@@ -4,6 +4,16 @@
   <ul class="list-group">
     <li class="list-group-item" *ngFor="let quiz of quizzes">
       <a href='/courses/{{courseId}}/quizzes/{{quiz._id}}'>{{quiz.title}}</a>
+      <br/>
+      Number of attempts : {{quiz.attempts.length}}
+
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let attempt of quiz.attempts; let i = index" [attr.data-index]="i">
+       Attempts {{i+1}} Score : {{attempt.score}}%
+
+      </li>
+    </ul>
     </li>
   </ul>
+
 </div>

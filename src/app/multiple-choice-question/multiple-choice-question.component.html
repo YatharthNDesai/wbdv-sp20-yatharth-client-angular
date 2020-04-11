@@ -1,5 +1,5 @@
 <h4>
-  {{question.question}}
+  {{this.question.question}}
   <label class= "fa" style="float:right;"
          [ngClass]="grading && {'fa-check' : answer === question.correct,
        'fa-times': answer !== question.correct}"
@@ -36,7 +36,10 @@ Your answer : {{answer}}
 </label>
 <br/>
 <button class="btn btn-primary" (click)="grade()">Grade</button>
-
+<br/>
+<button (click)="submitAnswer()">
+  Submit Answer
+</button>
 <!--<span [hidden]="answer !== question.correct">Yay!</span>-->
 <!--<span [hidden]="answer !== question.correct">Boo!</span>-->
 

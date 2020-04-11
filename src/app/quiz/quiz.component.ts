@@ -17,7 +17,15 @@ export class QuizComponent implements OnInit {
   constructor(private route: ActivatedRoute,
               private quiz: QuizServiceClient,
               private question: QuestionServiceClient) { }
-
+submitQuiz = () => { fetch(`http://localhost:3000/api/quizzes/${this.quizId}/attempts`, {
+  method: 'POST',
+  body: JSON.stringify(this.questions),
+  headers: {
+    'content-type': 'application/json'
+  }
+}).then(response => response.json())
+  .then(result => console.log(result));
+}
   ngOnInit(): void {
     this.route.params.subscribe(params => {
       this.quizId = params.qid;
