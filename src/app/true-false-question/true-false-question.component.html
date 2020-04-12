@@ -49,10 +49,10 @@ Your answer : {{answer}}
 <label [hidden]="grading === false" >
   Correct Answer : {{question.correct}}
 </label>
-<br/>
-<button class="btn btn-primary" (click)="grade()">Grade</button>
-<br/>
-<button (click)="submitAnswer()">
+<!--<br/>-->
+<!--<button class="btn btn-primary" (click)="grade()">Grade</button>-->
+<!--<br/>-->
+<button class="btn btn-success" (click)="submitAnswer()">
   Submit Answer
 </button>
 <!--<span [hidden]="answer !== question.correct">Yay!</span>-->
