@@ -27,7 +27,7 @@ export class QuizzesComponent implements OnInit {
           this.quizzes = quizzes
           return quizzes.map(quiz => {
             console.log(quiz._id)
-            return fetch(`http://localhost:3000/api/quizzes/${quiz._id}/attempts`)
+            return fetch(`https://apricot-cobbler-36114.herokuapp.com/api/quizzes/${quiz._id}/attempts`)
               .then(response => response.json())
           });
         })

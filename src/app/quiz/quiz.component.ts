@@ -17,7 +17,7 @@ export class QuizComponent implements OnInit {
   constructor(private route: ActivatedRoute,
               private quiz: QuizServiceClient,
               private question: QuestionServiceClient) { }
-submitQuiz = () => { fetch(`http://localhost:3000/api/quizzes/${this.quizId}/attempts`, {
+submitQuiz = () => { fetch(`https://apricot-cobbler-36114.herokuapp.com/api/quizzes/${this.quizId}/attempts`, {
   method: 'POST',
   body: JSON.stringify(this.questions),
   headers: {
